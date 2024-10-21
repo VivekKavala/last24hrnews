@@ -1,0 +1,8 @@
+steps to follow for blog pages creation
+
+1. Import the required modules.
+2. Create a global list of present dates.
+3. Store the existing data in the json files in list format.
+4. Get new data from the API and add to existing lists and add the data to new lists too.
+5. Then create pages by iterating through the new lists and take the related articles from the old lists and update the addedArticles list and addedArticlesIds list.
+6. Create Home Page and categories pages.

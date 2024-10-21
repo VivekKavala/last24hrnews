@@ -1,0 +1,21 @@
+.articles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.article {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+}
+
+.img-container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.article img {
+    width: 70%;
+}
