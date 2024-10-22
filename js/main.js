@@ -158,12 +158,12 @@
 
     searchBox.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
-            window.open(`/search/?query=${searchBox.value}`);
+            window.open(`/search/?query=${searchBox.value}`, "_self");
         }
     })
 
     searchIcon.addEventListener('click', () => {
-        window.open(`/search/?query=${searchBox.value}`);
+        window.open(`/search/?query=${searchBox.value}`, "_self");
     })
 
     setTrending();
