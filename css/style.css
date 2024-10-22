@@ -54,11 +54,25 @@ h2,
 h3,
 h4,
 p,
-span {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.15;
+span,
+input,
+label,
+textarea {
+  font-family: 'Poppins', sans-serif !important;
+  /* line-height: 1.15; */
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.search-container,
+.s-container {
+  min-height: 500px;
+}
+
+.max-1100 {
+  padding: 10px;
+  max-width: 1100px;
+  margin-inline: auto;
 }
 
 h1,
