@@ -26,11 +26,13 @@
         content="At Last24HRNews, we keep you connected to the pulse of the world with timely updates and accurate reporting. Whether it's global events, politics, technology, or local stories, we bring you the latest breaking news as it happens, every hour of the day. With our commitment to real-time coverage, you'll always be informed and ahead of the curve. Stay tuned and never miss a headline with Last24HRNews — your go-to source for round-the-clock news updates." />
     <link rel="canonical" href="https://last24hrnews.com/">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/search.css">
 </head>
 
 <body>
@@ -45,8 +47,8 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
-                    <a href="/" class="nav-item nav-link active">Home</a>
-                    <a href="/search" class="nav-item nav-link">Search News</a>
+                    <a href="/" class="nav-item nav-link">Home</a>
+                    <a href="/search" class="nav-item active nav-link">Search News</a>
                     <!-- <a href="" class="nav-item nav-link">Politics</a> -->
                     <div class="nav-item dropdown">
                         <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
@@ -70,12 +72,28 @@
         </nav>
     </header>
     <!-- Navbar End -->
-
     <main class="search-container">
         <div class="max-1100">
             <h1 class="l-txt">Search</h1>
+            <div class="search-box-container">
+                <input class="small-txt input-box" type="search" placeholder="search any query...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
             <div class="search-results">
-
+                <h2 class="m-l-txt">Results</h2>
+                <div class="res-container">
+                    <div class="loader-c-a">
+                        <div class="loader-a"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="trending-articles">
+                <h2 class="m-l-txt">Trending Aricles</h2>
+                <div class="trending-res">
+                    <div class="loader-c-a">
+                        <div class="loader-a"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

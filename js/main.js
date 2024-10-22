@@ -152,6 +152,20 @@
 
     }
     catch { }
+
+    const searchBox = document.querySelector('.form-control');
+    const searchIcon = document.querySelector('.input-group-append');
+
+    searchBox.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            window.open(`/search/?query=${searchBox.value}`);
+        }
+    })
+
+    searchIcon.addEventListener('click', () => {
+        window.open(`/search/?query=${searchBox.value}`);
+    })
+
     setTrending();
 
 })(jQuery);
@@ -167,16 +181,16 @@ function cleanString(str) {
 }
 
 function setTrending() {
-    fetch('/data/trending.json')
-        .then((res) => res.json())
-        .then((data) => {
 
-            console.log(data);
+    const trendingContainer = document.querySelector('.trending-container');
+    const trendingContainerLoader = document.querySelector('.trending-loader');
+    if (trendingContainer) {
+        fetch('/data/trending.json')
+            .then((res) => res.json())
+            .then((data) => {
 
-            const trendingContainer = document.querySelector('.trending-container');
-            const trendingContainerLoader = document.querySelector('.trending-loader');
+                console.log(data);
 
-            if (trendingContainer) {
                 for (let i = 0; i < 5; i++) {
                     let div = document.createElement('div');
                     div.classList.add('d-flex')
@@ -227,7 +241,7 @@ function setTrending() {
                     }
                     trendingContainer.appendChild(div);
                 }
-            }
 
-        })
+            })
+    }
 }

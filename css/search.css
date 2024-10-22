@@ -1,0 +1,162 @@
+h2 {
+    margin-block: 15px;
+}
+
+.display-block {
+    display: block !important;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.search-box-container {
+    position: relative;
+}
+
+.search-box-container i {
+    position: absolute;
+    left: 20px;
+    top: 12px;
+}
+
+.search-box-container input {
+    padding: 10px;
+    padding-inline-start: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.search-box-container input:focus {
+    outline: none;
+}
+
+.search-results {
+    margin-block: 10px;
+}
+
+.res-container {
+    padding: 10px;
+}
+
+.display-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    gap: 10px;
+}
+
+@media only screen and (max-width:900px) {
+    .display-grid {
+        grid-template-columns: repeat(3, 33%);
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .display-grid {
+        grid-template-columns: repeat(2, 49%);
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .display-grid {
+        grid-template-columns: repeat(1, 99%);
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+.loader-c-a {
+    width: 100%;
+    margin-block: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.loader-a {
+    --s: 20px;
+
+    --_d: calc(0.353*var(--s));
+    width: calc(var(--s) + var(--_d));
+    aspect-ratio: 1;
+    display: grid;
+}
+
+.loader-a:before,
+.loader-a:after {
+    content: "";
+    grid-area: 1/1;
+    clip-path: polygon(var(--_d) 0, 100% 0, 100% calc(100% - var(--_d)), calc(100% - var(--_d)) 100%, 0 100%, 0 var(--_d));
+    background:
+        conic-gradient(from -90deg at calc(100% - var(--_d)) var(--_d),
+            #fff 135deg, #666 0 270deg, #aaa 0);
+    animation: l6 2s infinite;
+}
+
+.loader-a:after {
+    animation-delay: -1s;
+}
+
+@keyframes l6 {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    25% {
+        transform: translate(30px, 0)
+    }
+
+    50% {
+        transform: translate(30px, 30px)
+    }
+
+    75% {
+        transform: translate(0, 30px)
+    }
+
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+.res {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    transition: all 0.5s;
+    animation: fadeUp 0.2s linear;
+}
+
+.res a:hover {
+    text-decoration: none;
+}
+
+.res-img-c {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.res-details {
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+
+p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
