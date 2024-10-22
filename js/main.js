@@ -197,7 +197,7 @@ function setTrending() {
                     div.classList.add('mb-3')
 
                     let imageSource = '/img/last24hrnews.webp'
-                    if (data[i]['image'] !== imageSource) {
+                    if (data[i]['image'] !== imageSource && data[i]['image'].indexOf('ANI-News-Logo-96x96.jpg') === -1) {
                         imageSource = `/img/articles/${data[i]['id']}.jpg`
                     }
 
