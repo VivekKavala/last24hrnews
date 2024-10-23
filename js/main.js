@@ -189,8 +189,6 @@ function setTrending() {
             .then((res) => res.json())
             .then((data) => {
 
-                console.log(data);
-
                 for (let i = 0; i < 5; i++) {
                     let div = document.createElement('div');
                     div.classList.add('d-flex')
