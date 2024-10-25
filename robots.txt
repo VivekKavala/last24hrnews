@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://last24hrnews.com/sitemap.xml
