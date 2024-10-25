@@ -782,6 +782,18 @@ pre code {
   overflow-y: scroll;
 }
 
+.cat-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.main-heading {
+  margin-bottom: 30px;
+}
+
 .container,
 .container-fluid,
 .container-sm,
@@ -11024,4 +11036,8 @@ h6,
 .main-slider .owl-carousel .owl-nav {
   position: absolute;
   justify-content: space-between;
+}
+
+.categories-container-a .owl-nav {
+  top: 0px;
 }
