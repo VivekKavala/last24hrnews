@@ -116,7 +116,7 @@
                         <div class="res-img-c" style="background-image:url(${imgSource});">
                         </div>
                         <a href="/news/${year}/${month + 1}/${divAnchor}" class="res-details small-txt">
-                            <h3>
+                            <h3 class="m-l-txt">
                                 ${data['title']}
                             </h3>
                             <p>${data['text'].slice(0, 120)}</p>
