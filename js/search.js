@@ -132,9 +132,11 @@
     }
 
     function cleanString2(str) {
+
         let cleanedStr = str.replace(/[^a-zA-Z0-9 ]/g, '');
 
-        let result = cleanedStr.replace(/\s+/g, '-').toLowerCase();
+
+        let result = cleanedStr.split(" ").join("-").toLowerCase();
 
         return result;
     }
