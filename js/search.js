@@ -16,7 +16,7 @@
 
     if (query && query != '') {
         trendingContainerA.classList.add('display-none');
-        await getData()
+        await getData();
         setSearchResults(query);
     } else {
         searchContainerA.classList.add('display-none');
