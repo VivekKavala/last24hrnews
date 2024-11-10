@@ -41,6 +41,7 @@
 
     async function getData() {
         data = await loadJSONFile('/data/all_articles.json');
+
     }
 
     async function setSearchResults(query) {
@@ -67,7 +68,7 @@
         const lowerQuery = query.toLowerCase();
 
         let count = 0;
-        for (let i = 0; i < data.length; i++) {
+        for (let i = data.length - 1; i >= 0; i--) {
             if (
                 data[i].title.toLowerCase().includes(lowerQuery) ||
                 data[i].text.toLowerCase().includes(lowerQuery) ||
