@@ -75,7 +75,14 @@ textarea {
   margin-inline: auto;
 }
 
-h1,
+h1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 20;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: normal;
+}
+
 h2,
 h3,
 h4,
